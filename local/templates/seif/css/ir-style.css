@@ -1,0 +1,27 @@
+.ir-content-docs{
+	
+}
+.ir-content-docs .ir-content-docs1{
+	position: relative;
+    display: block;
+    margin-bottom: 20px;
+    color: #353C68;
+    font-weight: 500;
+    padding-left: 40px;
+}
+.ir-content-docs .ir-content-docs1:hover{
+    color: #3C6FBC;
+	text-decoration:none
+}
+.ir-content-docs1:before{
+	position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    background: url(/bitrix/templates/seif/images/doc-icon.svg)no-repeat 50%;
+    width: 20px;
+    height: 20px;
+}
+.ir-content-zag-docs1{
+	
+}

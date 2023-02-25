@@ -1,0 +1,17 @@
+/bitrix/
+*.xml
+*.png
+*.mp3
+*.mp4
+*.txt
+*.jpg
+*.html
+*.json
+/upload/
+*.config
+*.htaccess
+.DS_Store
+favicon.ico
+*.sql
+*.svg
+*.gif
