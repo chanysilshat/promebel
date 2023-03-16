@@ -11,7 +11,7 @@ $APPLICATION->SetTitle("Главная");
 		        <use xlink:href="#advantages-1"></use>
 		    </svg>
 		    <div class="advantages-text">
-				Широта<br>ассортимента
+				Широта <br>ассортимента
 				<br>
 				<span>
 				В том случае, если другая продукция
@@ -22,7 +22,7 @@ $APPLICATION->SetTitle("Главная");
 			<svg width="70" height="70">
 		        <use xlink:href="#advantages-2"></use>
 		    </svg>
-		    <div class="advantages-text">Быстрые<br>сроки замера
+		    <div class="advantages-text">Быстрые <br>сроки замера
 				<span>
 					В том случае, если другая продукция
 				</span>
@@ -32,7 +32,7 @@ $APPLICATION->SetTitle("Главная");
 			<svg width="55" height="70">
 		        <use xlink:href="#advantages-3"></use>
 		    </svg>
-		    <div class="advantages-text">100% гарантия<br>на наши товары
+		    <div class="advantages-text">100% гарантия <br>на наши товары
 				<span>
 					В том случае, если другая продукция
 				</span>

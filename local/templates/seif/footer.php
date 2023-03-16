@@ -3,169 +3,169 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 ?>
 
-<? if ($type_client != 1) {?>
+<? //if ($type_client != 1) {?>
 
-	<?if($APPLICATION->GetCurPage() != '/'):?>
-		<?if((CSite::InDir('/catalog/')) && ($pieces[3]!="")):?>
-		<?elseif((CSite::InDir('/catalog/')) && ($pieces[3]=="")):?>
-			</div>
-		<?else:?>
+		<?if($APPLICATION->GetCurPage() != '/'):?>
+			<?if((CSite::InDir('/catalog/')) && ($pieces[3]!="")):?>
+			<?elseif((CSite::InDir('/catalog/')) && ($pieces[3]=="")):?>
 				</div>
-			</div>
+			<?else:?>
+					</div>
+				</div>
+			<?endif;?>
 		<?endif;?>
-	<?endif;?>
-	<div class="consultation">
+		<div class="consultation">
 
-		<div class="block-main consultation-main">
-			<div class="consultation-block">
-				<div>
-					<div class="consultation-info">
-						<div class="title consultation-title">Бесплатная консультация</div>
-						<div class="consultation-preview">Заполните поля и мы Вам перезвоним в течение 5 минут</div>
-						<div class="consultation-form">
-							<label>Ваше имя</label>
-							<input type="text" class="consultation-form-input" id="cons-name" placeholder="Введите имя">
-						</div>
-						<div class="consultation-form">
-							<label>Ваш номер телефона</label>
-							<input type="text" class="consultation-form-input" id="cons-phone" placeholder="+ 7 (800) 555 - 35 -35">
-						</div>
-						<div class="consultation-bottom">
-							<div class="consultation-polit">
-								Нажимая на кнопку, Вы соглашаетесь на обработку <a href="/politika-konfidentsialnosti/" target="_blank">персональных данных.</a>
+			<div class="block-main consultation-main">
+				<div class="consultation-block">
+					<div>
+						<div class="consultation-info">
+							<div class="title consultation-title">Бесплатная консультация</div>
+							<div class="consultation-preview">Заполните поля и мы Вам перезвоним в течение 5 минут</div>
+							<div class="consultation-form">
+								<label>Ваше имя</label>
+								<input type="text" class="consultation-form-input" id="cons-name" placeholder="Введите имя">
 							</div>
-							<div class="btn consultation-btn" onclick="fos('Бесплатная консультация','FIXEDFOS');">Отправить</div>
+							<div class="consultation-form">
+								<label>Ваш номер телефона</label>
+								<input type="text" class="consultation-form-input" id="cons-phone" placeholder="+ 7 (800) 555 - 35 -35">
+							</div>
+							<div class="consultation-bottom">
+								<div class="consultation-polit">
+									Нажимая на кнопку, Вы соглашаетесь на обработку <a href="/politika-konfidentsialnosti/" target="_blank">персональных данных.</a>
+								</div>
+								<div class="btn consultation-btn" onclick="fos('Бесплатная консультация','FIXEDFOS');">Отправить</div>
+							</div>
+							<input type="hidden" id="cons-page" value="<?=$url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>">
 						</div>
-						<input type="hidden" id="cons-page" value="<?=$url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];?>">
 					</div>
+					<!--<div class="consultation-img"></div>-->
 				</div>
-				<!--<div class="consultation-img"></div>-->
+		
 			</div>
-	
-		</div>
-		<div class="background-slider">
-			<img src="/upload/s-back.png">
-			<img class="img-slider" src="/upload/phone.png">
+			<div class="background-slider">
+				<img src="/upload/s-back.png">
+				<img class="img-slider" src="/upload/phone.png">
 
-		</div>
-		<div class="background-slider-color">
-		</div>
-	</div>
-</div>
-<footer>
-	<div class="footer-1">
-		<div class='block-main'>
-			<div class="footer-info">
-				<?if($APPLICATION->GetCurPage() == '/'):?>
-					<div class="footer-logo">
-						<svg width="160" height="55">
-							<use xlink:href="#logo"></use>
-						</svg>
-						<!--<div class="footer-logo-text">
-							Интернет-магазин<br> сейфов и<br> металлической мебели
-						</div>-->
-					</div>
-				<?else:?>
-					<a href="/" class="footer-logo">
-						<svg width="244" height="80">
-							<use xlink:href="#logo"></use>
-						</svg>
-						<!--<div class="footer-logo-text">
-							Интернет-магазин<br> сейфов и<br> металлической мебели
-						</div>-->
-					</a>
-				<?endif;?>
-				<a href="/kontakty/" class="footer-address">
-					<?$APPLICATION->IncludeComponent(
-						"bitrix:main.include",
-						"",
-						Array(
-							"AREA_FILE_SHOW" => "file",
-							"AREA_FILE_SUFFIX" => "inc",
-							"EDIT_TEMPLATE" => "",
-							"PATH" => "/bitrix/templates/seif/include/file/address.php"
-						)
-					);?>
-				</a>
-				<div class="footer-mail">
-					<?$APPLICATION->IncludeComponent(
-						"bitrix:main.include",
-						"",
-						Array(
-							"AREA_FILE_SHOW" => "file",
-							"AREA_FILE_SUFFIX" => "inc",
-							"EDIT_TEMPLATE" => "",
-							"PATH" => "/bitrix/templates/seif/include/file/mail.php"
-						)
-					);?>
-				</div>
-				<div class="footer-phone">
-					<?$APPLICATION->IncludeComponent(
-						"bitrix:main.include",
-						"",
-						Array(
-							"AREA_FILE_SHOW" => "file",
-							"AREA_FILE_SUFFIX" => "inc",
-							"EDIT_TEMPLATE" => "",
-							"PATH" => "/bitrix/templates/seif/include/file/phone.php"
-						)
-					);?>
-				</div>
 			</div>
-			<nav class="footer-menu">
-				<ul>
-					<li>
-						<a href="/o-kompanii/" class="footer-menu-gl">О компании</a>
-						<a href="/proizvoditeli/" class="footer-menu-link">Производители</a>
-						<a href="/otzyvy/" class="footer-menu-link">Отзывы</a>
-						<a href="/novosti/" class="footer-menu-link">Новости</a>
-						<a href="/prays-list/" class="footer-menu-link">Прайс-лист</a>
-						<a href="/sertifikaty/" class="footer-menu-link">Документы</a>
-						<?/*?><a href="/stati/" class="footer-menu-link">Статьи</a><?*/?>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a href="/catalog/" class="footer-menu-gl">Каталог</a>
-						<a href="/catalog/seyfy/" class="footer-menu-link">Сейфы</a>
-						<a href="/catalog/meditsinskaya-mebel-i-oborudovanie/" class="footer-menu-link">Медицинская мебель и оборудование</a>
-						<a href="/catalog/metallicheskie-mebel/" class="footer-menu-link">Металлическая мебель</a>
-						
-						<a href="/catalog/metallicheskie-stellazhi/" class="footer-menu-link">Металлические стеллажи</a>
-						<!--<a href="/catalog/mobilnyy-arkhiv/" class="footer-menu-link">Мобильный архив</a>-->
-						<a href="/catalog/proizvodstvennaya-mebel/" class="footer-menu-link">Производственная мебель</a>
-						<a href="/catalog/avtomaticheskie-sistemy-khraneniya-/" class="footer-menu-link">Автоматические системы хранения</a>
-						<a href="/catalog/drugaya-produktsiya/" class="footer-menu-link">Другая продукция</a>
-						<a href="/catalog/stellazhi-dlya-sklada-metallicheskie-palletnye/" class="footer-menu-link">
-							Стеллажи для склада металлические паллетные
-						</a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<a href="/servis/" class="footer-menu-gl">Сервис</a>
-						<a href="/servis/izgotovlenie-pod-zakaz/" class="footer-menu-link">Изготовление под заказ</a>
-						<a href="/servis/remont-i-vskrytie/" class="footer-menu-link">Ремонт и вскрытие</a>
-						<a href="/servis/garantiynoe-obsluzhivanie/" class="footer-menu-link">Гарантийное обслуживание</a>
-					</li>
-				</ul>
-				<ul>
-					<li>
-						<div class="footer-menu-gl">Информация</div>
-						<a href="/kak-kupit/" class="footer-menu-link">Как купить</a>
-						<a href="/dostavka/" class="footer-menu-link">Доставка и оплата</a>
-						<a href="/aktsii/" class="footer-menu-link">Акции</a>
-						<a href="/kontakty/" class="footer-menu-link">Контакты</a>
-					</li>
-				</ul>
-			</nav>
+			<div class="background-slider-color">
+			</div>
 		</div>
 	</div>
-	
-</footer>
-<?}else{?>
+	<footer>
+		<div class="footer-1">
+			<div class='block-main'>
+				<div class="footer-info">
+					<?if($APPLICATION->GetCurPage() == '/'):?>
+						<div class="footer-logo">
+							<svg width="160" height="55">
+								<use xlink:href="#logo"></use>
+							</svg>
+							<!--<div class="footer-logo-text">
+								Интернет-магазин<br> сейфов и<br> металлической мебели
+							</div>-->
+						</div>
+					<?else:?>
+						<a href="/" class="footer-logo">
+							<svg width="244" height="80">
+								<use xlink:href="#logo"></use>
+							</svg>
+							<!--<div class="footer-logo-text">
+								Интернет-магазин<br> сейфов и<br> металлической мебели
+							</div>-->
+						</a>
+					<?endif;?>
+					<a href="/kontakty/" class="footer-address">
+						<?$APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							"",
+							Array(
+								"AREA_FILE_SHOW" => "file",
+								"AREA_FILE_SUFFIX" => "inc",
+								"EDIT_TEMPLATE" => "",
+								"PATH" => "/bitrix/templates/seif/include/file/address.php"
+							)
+						);?>
+					</a>
+					<div class="footer-mail">
+						<?$APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							"",
+							Array(
+								"AREA_FILE_SHOW" => "file",
+								"AREA_FILE_SUFFIX" => "inc",
+								"EDIT_TEMPLATE" => "",
+								"PATH" => "/bitrix/templates/seif/include/file/mail.php"
+							)
+						);?>
+					</div>
+					<div class="footer-phone">
+						<?$APPLICATION->IncludeComponent(
+							"bitrix:main.include",
+							"",
+							Array(
+								"AREA_FILE_SHOW" => "file",
+								"AREA_FILE_SUFFIX" => "inc",
+								"EDIT_TEMPLATE" => "",
+								"PATH" => "/bitrix/templates/seif/include/file/phone.php"
+							)
+						);?>
+					</div>
+				</div>
+				<nav class="footer-menu">
+					<ul>
+						<li>
+							<a href="/o-kompanii/" class="footer-menu-gl">О компании</a>
+							<a href="/proizvoditeli/" class="footer-menu-link">Производители</a>
+							<a href="/otzyvy/" class="footer-menu-link">Отзывы</a>
+							<a href="/novosti/" class="footer-menu-link">Новости</a>
+							<a href="/prays-list/" class="footer-menu-link">Прайс-лист</a>
+							<a href="/sertifikaty/" class="footer-menu-link">Документы</a>
+							<?/*?><a href="/stati/" class="footer-menu-link">Статьи</a><?*/?>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="/catalog/" class="footer-menu-gl">Каталог</a>
+							<a href="/catalog/seyfy/" class="footer-menu-link">Сейфы</a>
+							<a href="/catalog/meditsinskaya-mebel-i-oborudovanie/" class="footer-menu-link">Медицинская мебель и оборудование</a>
+							<a href="/catalog/metallicheskie-mebel/" class="footer-menu-link">Металлическая мебель</a>
+							
+							<a href="/catalog/metallicheskie-stellazhi/" class="footer-menu-link">Металлические стеллажи</a>
+							<!--<a href="/catalog/mobilnyy-arkhiv/" class="footer-menu-link">Мобильный архив</a>-->
+							<a href="/catalog/proizvodstvennaya-mebel/" class="footer-menu-link">Производственная мебель</a>
+							<a href="/catalog/avtomaticheskie-sistemy-khraneniya-/" class="footer-menu-link">Автоматические системы хранения</a>
+							<a href="/catalog/drugaya-produktsiya/" class="footer-menu-link">Другая продукция</a>
+							<a href="/catalog/stellazhi-dlya-sklada-metallicheskie-palletnye/" class="footer-menu-link">
+								Стеллажи для склада металлические паллетные
+							</a>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="/servis/" class="footer-menu-gl">Сервис</a>
+							<a href="/servis/izgotovlenie-pod-zakaz/" class="footer-menu-link">Изготовление под заказ</a>
+							<a href="/servis/remont-i-vskrytie/" class="footer-menu-link">Ремонт и вскрытие</a>
+							<a href="/servis/garantiynoe-obsluzhivanie/" class="footer-menu-link">Гарантийное обслуживание</a>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<div class="footer-menu-gl">Информация</div>
+							<a href="/kak-kupit/" class="footer-menu-link">Как купить</a>
+							<a href="/dostavka/" class="footer-menu-link">Доставка и оплата</a>
+							<a href="/aktsii/" class="footer-menu-link">Акции</a>
+							<a href="/kontakty/" class="footer-menu-link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+	</footer>
+<?/*}else{?>
 	<?$APPLICATION->IncludeFile('/bitrix/templates/seif/include-template-mobile/footer.php');?>
-<?}?>
+<?}*/?>
 <?
     use Bitrix\Sale;
     CModule::IncludeModule("iblock");
@@ -274,8 +274,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <script src="<?=SITE_TEMPLATE_PATH.'/js/jquery.maskedinput.min.js'?>"></script>
 <script src="<?=SITE_TEMPLATE_PATH.'/js/main.js?v=8.11'?>"></script>
 <script src="<?=SITE_TEMPLATE_PATH.'/js/dd-script.js'?>"></script>
-<? if ($type_client == 1) {?>
+<? /*if ($type_client == 1) {?>
 	<script src="<?=SITE_TEMPLATE_PATH.'/js/main-mobile.js?v=2'?>"></script>
-<?}?>
+<?}*/?>
 </body>
 </html>
