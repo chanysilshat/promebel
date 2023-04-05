@@ -168,7 +168,7 @@
 /* ============================================================================ */
 
 body .advantages {
-    margin: -120px auto 0 auto;
+    margin: 0px auto 80px auto;
     z-index: -1;
 }
 @media (max-width: 991px){
@@ -252,7 +252,8 @@ body .advantages {
   }
 }
 .block-main{
-    margin: 145px auto 100px auto;
+    /*margin: 145px auto 100px auto;*/
+  margin: 100px auto 50px auto;
 }
 @media (max-width: 991px){
   .block-main{
@@ -913,6 +914,43 @@ transform: rotate(90deg);
 .inquiry-result .recommend-panel-info .slick-dots{
   bottom: -7px;
 }
+.cat-nal-no {
+  display: none !important;
+}
+.catalog-menu-one li:last-child::before,
+.header-nav li ul li:last-child a::before{
+  display: none !important;
+}
+.header-nav li a.header-nav-link-one{
+  position: relative;
+}
+.header-nav li:first-child a.header-nav-link-one::before,
+.header-nav li:nth-child(4) a.header-nav-link-one::before{
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 10px solid #989898;
+  border-bottom: 5px solid transparent;
+  top: 47px;
+  right: -20px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  transform: rotate(90deg);
+}
+.header-nav li:first-child a.header-nav-link-one:hover::before,
+.header-nav li:nth-child(4) a.header-nav-link-one:hover::before{
+  border-left: 10px solid #353C68;
+}
+.sale_order_full_table .ps_logo img{
+  display: none;
+}
+.sale_order_full_table .ps_logo .pay_name{
+  font-size: 16px;
+  font-weight: 600;
+}
 @media screen and (max-width: 1200px){
   .main .card{
     padding-left: 0px;
@@ -962,9 +1000,7 @@ transform: rotate(90deg);
   margin-right: 10px;
   margin-left: auto;
   }
-  body .advantages {
-    margin: 0px auto 0 auto;
-  }
+
   .main{
     margin-top: 90px;
   }
@@ -1109,6 +1145,9 @@ transform: rotate(90deg);
   .catalog-list-panel {
     width: 49%;
     margin-right: 0;
+  }
+  .block-main {
+    margin: 50px auto 50px auto;
   }
 }
 @media screen and (max-width: 767px){
@@ -1352,6 +1391,12 @@ transform: rotate(90deg);
   .slider-main .slider-content {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .block-main {
+    margin: 50px auto 50px auto;
+  }
+  body .advantages {
+    margin: 0px auto 50px auto;
   }
 }
 @media screen and (max-width: 375.9px){

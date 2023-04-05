@@ -82,7 +82,7 @@
 						<a href="" class="m-menu-link-two" data-item="8">Другая продукция</a>
 					</li>
 					<li class="m-menu-item-two">
-						<a href="/catalog/stellazhi-dlya-sklada-metallicheskie-palletnye/" class="m-menu-link-two m-menu-link-end">Стеллажи для склада <br>металлические паллетные</a>
+						<a href="/catalog/stellazhi-dlya-sklada-metallicheskie-palletnye/" class="m-menu-link-two m-menu-link-end">Стеллажи</a>
 					</li>
 				</ul>
 			</li>

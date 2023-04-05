@@ -3,43 +3,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle("Главная");
 ?>
 <? if ($type_client != 1) {?>
-<div class="advantages block-main">
-	<!--<div class="advantages-title">Наши преимущества</div>-->
-	<div class="advantages-block">
-		<div class="advantages-panel">
-			<svg width="70" height="70">
-		        <use xlink:href="#advantages-1"></use>
-		    </svg>
-		    <div class="advantages-text">
-				Широта <br>ассортимента
-				<br>
-				<span>
-				В том случае, если другая продукция
-				</span>
-			</div>
-		</div>
-		<div class="advantages-panel">
-			<svg width="70" height="70">
-		        <use xlink:href="#advantages-2"></use>
-		    </svg>
-		    <div class="advantages-text">Быстрые <br>сроки замера
-				<span>
-					В том случае, если другая продукция
-				</span>
-			</div>
-		</div>
-		<div class="advantages-panel">
-			<svg width="55" height="70">
-		        <use xlink:href="#advantages-3"></use>
-		    </svg>
-		    <div class="advantages-text">100% гарантия <br>на наши товары
-				<span>
-					В том случае, если другая продукция
-				</span>
-			</div>
-		</div>
-	</div>
-</div>
+
 <?global $USER?>
 <?
 	if ($USER->isAdmin()){
@@ -103,7 +67,43 @@ $APPLICATION->SetTitle("Главная");
 						$newElements[$ob3["ID"]] = $ob3;
 						?>
 					<?endwhile;?>
-		
+    <div class="advantages block-main">
+        <!--<div class="advantages-title">Наши преимущества</div>-->
+        <div class="advantages-block">
+            <div class="advantages-panel">
+                <svg width="70" height="70">
+                    <use xlink:href="#advantages-1"></use>
+                </svg>
+                <div class="advantages-text">
+                    Широта <br>ассортимента
+                    <br>
+                    <span>
+				В том случае, если другая продукция
+				</span>
+                </div>
+            </div>
+            <div class="advantages-panel">
+                <svg width="70" height="70">
+                    <use xlink:href="#advantages-2"></use>
+                </svg>
+                <div class="advantages-text">Быстрые <br>сроки замера
+                    <span>
+					В том случае, если другая продукция
+				</span>
+                </div>
+            </div>
+            <div class="advantages-panel">
+                <svg width="55" height="70">
+                    <use xlink:href="#advantages-3"></use>
+                </svg>
+                <div class="advantages-text">100% гарантия <br>на наши товары
+                    <span>
+					В том случае, если другая продукция
+				</span>
+                </div>
+            </div>
+        </div>
+    </div>
 <div class="recommend">
 	<!--<div class="recommend-line-1"></div>
 	<div class="recommend-line-2"></div>-->
